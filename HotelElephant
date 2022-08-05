@@ -1,0 +1,434 @@
+game:GetService("StarterGui"):SetCore("SendNotification", { 
+        Title = "Notification";
+        Text = "GUI Ran";
+        Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
+    Duration = 5;
+local Library = loadstring(game:HttpGet("https://pastebin.com/raw/59vE7ecD"))()
+local Window = Library.CreateLib("Hotel Elephant Exploit", "Ocean")
+local Tab = Window:NewTab("Player")
+local Section = Tab:NewSection("Movement")
+Section:NewSlider("Speed", "changes your speed", 500, 0, function(s)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+end)
+Section:NewSlider("JumpPower", "changes how high you jump", 500, 0, function(s)
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
+end)
+Section:NewSlider("Gravity", "changes your gravity", 0, 1000, function(s)
+    game.Workspace.Gravity = s
+end)
+Section:NewButton("Reset Movement", "Makes you the default movements", function()
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
+game.Workspace.Gravity = 196
+end)
+local Section = Tab:NewSection("Change YOUR Team")
+Section:NewButton("Hotel Guest", "", function()    
+local args = {
+    [1] = "Bright yellow"
+}
+
+game:GetService("ReplicatedStorage").ChangeTeam:InvokeServer(unpack(args))
+
+end)
+Section:NewButton("Waiter/Waitress", "", function()    
+local args = {
+    [1] = "Bright red"
+}
+
+game:GetService("ReplicatedStorage").ChangeTeam:InvokeServer(unpack(args))
+
+end)
+Section:NewButton("Waiter/Waitress", "", function()    
+local args = {
+    [1] = "Bright red"
+}
+
+game:GetService("ReplicatedStorage").ChangeTeam:InvokeServer(unpack(args))
+
+end)
+Section:NewButton("Shop assistant", "", function()    
+local args = {
+    [1] = "Bright blue"
+}
+
+game:GetService("ReplicatedStorage").ChangeTeam:InvokeServer(unpack(args))
+
+end)
+Section:NewButton("Manager", "", function()    
+local args = {
+    [1] = "Bright green"
+}
+
+game:GetService("ReplicatedStorage").ChangeTeam:InvokeServer(unpack(args))
+
+end)
+local Tab = Window:NewTab("Cash")
+local Section = Tab:NewSection("Give yourself cash")
+Section:NewButton("10K", "Gives you 10K Cash", function()
+local A_1 = false
+local A_2 = 10000
+local A_3 = "Cash"
+local Event = game:GetService("ReplicatedStorage").MoneyRequest
+Event:FireServer(A_1, A_2, A_3)
+end)
+Section:NewButton("100K", "Gives you 100K", function()
+local A_1 = false
+local A_2 = 100000
+local A_3 = "Cash"
+local Event = game:GetService("ReplicatedStorage").MoneyRequest
+Event:FireServer(A_1, A_2, A_3)
+end)
+Section:NewButton("1 Million", "Gives you 1 Million Cash", function()
+local A_1 = false
+local A_2 = 1000000
+local A_3 = "Cash"
+local Event = game:GetService("ReplicatedStorage").MoneyRequest
+Event:FireServer(A_1, A_2, A_3)
+end)
+Section:NewButton("1 Billion", "Gives you 1 Billion Cash", function()
+local A_1 = false
+local A_2 = 1000000000
+local A_3 = "Cash"
+local Event = game:GetService("ReplicatedStorage").MoneyRequest
+Event:FireServer(A_1, A_2, A_3)
+end)
+Section:NewButton("Infinite", "Gives you basically infinite", function()
+local A_1 = false
+local A_2 = 100000000000000
+local A_3 = "Cash"
+local Event = game:GetService("ReplicatedStorage").MoneyRequest
+Event:FireServer(A_1, A_2, A_3)
+end)
+Section:NewButton("Make everyone jeff bezos", "gives sh1t ton of money to everyone", function()    
+    	Players = game:GetService("Players")
+	for i, plr in pairs(Players:GetPlayers()) do
+		local e = {
+			[1] = false,
+			[2] = 10000000000000,
+			[3] = "Cash",
+			[4] = plr
+		}
+
+		game:GetService("ReplicatedStorage").MoneyRequest:FireServer(unpack(e))
+	end
+end)
+local Section = Tab:NewSection("Take away")
+local Section = Tab:NewSection("You need more cash then ur taking away or ur kicked")
+Section:NewButton("-10K", "Takes away 10K Cash", function()
+local A_1 = false
+local A_2 = -10000
+local A_3 = "Cash"
+local Event = game:GetService("ReplicatedStorage").MoneyRequest
+Event:FireServer(A_1, A_2, A_3)
+end)
+Section:NewButton("-100K", "Takes away 100K", function()
+local A_1 = false
+local A_2 = -100000
+local A_3 = "Cash"
+local Event = game:GetService("ReplicatedStorage").MoneyRequest
+Event:FireServer(A_1, A_2, A_3)
+end)
+Section:NewButton("-1 Million", "Takes away 1 Million Cash", function()
+local A_1 = false
+local A_2 = -1000000
+local A_3 = "Cash"
+local Event = game:GetService("ReplicatedStorage").MoneyRequest
+Event:FireServer(A_1, A_2, A_3)
+end)
+Section:NewButton("-1 Billion", "Takes away 1 Billion Cash", function()
+local A_1 = false
+local A_2 = -1000000000
+local A_3 = "Cash"
+local Event = game:GetService("ReplicatedStorage").MoneyRequest
+Event:FireServer(A_1, A_2, A_3)
+end)
+Section:NewButton("-10K From EVERYONE", "takes away cash from everyone", function()    
+    	Players = game:GetService("Players")
+	for i, plr in pairs(Players:GetPlayers()) do
+		local e = {
+			[1] = false,
+			[2] = -10000,
+			[3] = "Cash",
+			[4] = plr
+		}
+
+		game:GetService("ReplicatedStorage").MoneyRequest:FireServer(unpack(e))
+	end
+end)
+Section:NewButton("-100K From EVERYONE", "takes away cash from everyone", function()    
+    	Players = game:GetService("Players")
+	for i, plr in pairs(Players:GetPlayers()) do
+		local e = {
+			[1] = false,
+			[2] = -100000,
+			[3] = "Cash",
+			[4] = plr
+		}
+
+		game:GetService("ReplicatedStorage").MoneyRequest:FireServer(unpack(e))
+	end
+end)
+Section:NewButton("Make everyone poor", "takes away cash from everyone", function()    
+    	Players = game:GetService("Players")
+	for i, plr in pairs(Players:GetPlayers()) do
+		local e = {
+			[1] = false,
+			[2] = -10000000000,
+			[3] = "Cash",
+			[4] = plr
+		}
+
+		game:GetService("ReplicatedStorage").MoneyRequest:FireServer(unpack(e))
+	end
+end)
+local Tab = Window:NewTab("Faces")
+local Section = Tab:NewSection("Change your face (Coming soon!)")
+--WORKING SOON
+local Tab = Window:NewTab("Troll")
+local Section = Tab:NewSection("Main")
+Section:NewButton("Destroy Server", "Disables Collision for parts", function()
+ for _, lol in pairs(game:GetDescendants()) do
+	game.ReplicatedStorage.DoorOpener:FireServer(lol)
+end
+    end)
+Section:NewButton("Suicide", "makes u jump off the balcony", function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(84.34717559814453, 101.9999771118164, -37.20904541015625)
+--game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Goodbye","All")
+--Remove "-- from the line above if you want to say Goodbye when jumping"
+game.Players.LocalPlayer.Character.Humanoid.Jump = true
+wait(0.8)
+local studs = 10
+local plr = game.Players.LocalPlayer
+local char = plr.Character or plr.CharacterAdded:Wait()
+
+char.Humanoid:MoveTo(char.HumanoidRootPart.Position+char.HumanoidRootPart.CFrame.lookVector*studs)
+wait(0.8)
+game.Players.LocalPlayer.Character.Humanoid.Health = 0 --Kill method (Makes your health 0)
+end)
+Section:NewButton("Sadboy/Creepy Fly", "Makes you fly creepy", function()
+loadstring(game:HttpGet("https://pastebin.com/raw/p0sGsY6e"))()
+end)
+Section:NewButton("Fake Headless", "", function()
+loadstring(game:HttpGet(('https://gist.githubusercontent.com/Gogogamer61/de8bf177f8ac5d4aa38e0b0f3c18957b/raw/680220619d022f6f44e9df30d13e44068d407708/HEADLESS%2520SCRIPT2'),true))()
+end)
+local Section = Tab:NewSection("Spawn Boat (FREE)")
+Section:NewButton("Jetski", "Spawns Jetski", function()
+local A_1 = "Jetski"
+local Event = game:GetService("ReplicatedStorage").BoatSpawner
+Event:InvokeServer(A_1)
+end)
+Section:NewButton("Dinghy", "Spawns Dinghy", function()
+local A_1 = "Dinghy"
+local Event = game:GetService("ReplicatedStorage").BoatSpawner
+Event:InvokeServer(A_1)
+end)
+Section:NewButton("Transport Boat", "Spawns Transport Boat", function()
+local A_1 = "Transport Boat"
+local Event = game:GetService("ReplicatedStorage").BoatSpawner
+Event:InvokeServer(A_1)
+end)
+local Section = Tab:NewSection("Doors")
+Section:NewButton("Open Cave/Disco Door", "Opens Cave Door", function()
+local A_1 = game:GetService("Workspace").CaveOpening.CaveButton
+local Event = game:GetService("ReplicatedStorage").DoorOpener
+Event:FireServer(A_1)
+end)
+Section:NewButton("Open Hill Door", "Opens Hill Door", function()
+local A_1 = game:GetService("Workspace").UpperDoor.CaveButton
+local Event = game:GetService("ReplicatedStorage").DoorOpener
+Event:FireServer(A_1)
+end)
+local Section = Tab:NewSection("Elevator")
+Section:NewButton("Bring to floor 1", "", function()
+local A_1 = "1"
+local Event = game:GetService("ReplicatedStorage").ElevatorHandler
+Event:FireServer(A_1)
+end)
+Section:NewButton("Bring to floor 2", "", function()
+local A_1 = "2"
+local Event = game:GetService("ReplicatedStorage").ElevatorHandler
+Event:FireServer(A_1)
+end)
+Section:NewButton("Bring to floor 3", "", function()
+local A_1 = "3"
+local Event = game:GetService("ReplicatedStorage").ElevatorHandler
+Event:FireServer(A_1)
+end)
+Section:NewButton("Bring to floor 4", "", function()
+local A_1 = "4"
+local Event = game:GetService("ReplicatedStorage").ElevatorHandler
+Event:FireServer(A_1)
+end)
+Section:NewButton("Bring to floor 5", "", function()
+local A_1 = "5"
+local Event = game:GetService("ReplicatedStorage").ElevatorHandler
+Event:FireServer(A_1)
+end)
+local Section = Tab:NewSection("Room Opener/Closer")
+Section:NewButton("Room 1", "", function()
+local A_1 = game:GetService("Workspace").RoomDoors["Room 1"]
+local Event = game:GetService("ReplicatedStorage").DoorOpener
+Event:FireServer(A_1)
+end)
+Section:NewButton("Room 2", "", function()
+local A_1 = game:GetService("Workspace").RoomDoors["Room 2"]
+local Event = game:GetService("ReplicatedStorage").DoorOpener
+Event:FireServer(A_1)
+end)
+Section:NewButton("Room 3", "", function()
+local A_1 = game:GetService("Workspace").RoomDoors["Room 3"]
+local Event = game:GetService("ReplicatedStorage").DoorOpener
+Event:FireServer(A_1)
+end)
+Section:NewButton("Room 3", "", function()
+local A_1 = game:GetService("Workspace").RoomDoors["Room 3"]
+local Event = game:GetService("ReplicatedStorage").DoorOpener
+Event:FireServer(A_1)
+end)
+Section:NewButton("Room 4", "", function()
+local A_1 = game:GetService("Workspace").RoomDoors["Room 4"]
+local Event = game:GetService("ReplicatedStorage").DoorOpener
+Event:FireServer(A_1)
+end)
+Section:NewButton("Room 5", "", function()
+local A_1 = game:GetService("Workspace").RoomDoors["Room 5"]
+local Event = game:GetService("ReplicatedStorage").DoorOpener
+Event:FireServer(A_1)
+end)
+Section:NewButton("Room 6", "", function()
+local A_1 = game:GetService("Workspace").RoomDoors["Room 6"]
+local Event = game:GetService("ReplicatedStorage").DoorOpener
+Event:FireServer(A_1)
+end)
+Section:NewButton("Room 7", "", function()
+local A_1 = game:GetService("Workspace").RoomDoors["Room 7"]
+local Event = game:GetService("ReplicatedStorage").DoorOpener
+Event:FireServer(A_1)
+end)
+Section:NewButton("Room 8", "", function()
+local A_1 = game:GetService("Workspace").RoomDoors["Room 8"]
+local Event = game:GetService("ReplicatedStorage").DoorOpener
+Event:FireServer(A_1)
+end)
+local Tab = Window:NewTab("Teleports")
+local Section = Tab:NewSection("Teleport to player")
+Section:NewTextBox("Player User -->", "", function(txt)
+	local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+local pl2 = txt
+local humanoid = game.Players.LocalPlayer.Character.Humanoid
+task.wait()
+pl.CFrame = game.Players[pl2].Character.HumanoidRootPart.CFrame
+end)
+local Section = Tab:NewSection("Outside")
+Section:NewButton("Cave/Disco", "", function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(111.61787414550781, 4.999998569488525, -54.76929473876953)
+end)
+Section:NewButton("Deck", "", function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(269.690185546875, 11.699996948242188, -24.892881393432617)
+end)
+Section:NewButton("Changing House", "340.3939514160156, 11.66999626159668, -195.1861114501953", function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(341.5042419433594, 11.66999626159668, -194.21377563476562)
+end)
+Section:NewButton("Spawn", "", function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(40.19999313354492, 99.9999771118164, 5.400001525878906)
+end)
+Section:NewButton("Casino", "", function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(121.27745056152344, 87.39997863769531, 38.197105407714844)
+end)
+Section:NewButton("Surgery Room", "", function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(110.45816040039062, 208.39996337890625, 57.64732360839844)
+end)
+Section:NewButton("Pool", "", function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(69.6488037109375, 165.39996337890625, 51.36452865600586)
+end)
+Section:NewButton("Face Changer", "", function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-38.821388244628906, 31.19999122619629, 66.91954803466797)
+end)
+local Tab = Window:NewTab("Body")
+local Section = Tab:NewSection("Changes your body (FREE)")
+Section:NewButton("Blocky/Default", "Makes you the Blocky body", function()
+local A_1 = "remove"
+local Event = game:GetService("ReplicatedStorage").ReplaceBody
+Event:FireServer(A_1)
+end)
+Section:NewButton("Man", "Makes you the man body", function()
+local A_1 = 
+{
+	[1] = "Man"
+}
+local Event = game:GetService("ReplicatedStorage").ReplaceBody
+Event:FireServer(A_1)
+end)
+Section:NewButton("Woman", "Makes you the woman body", function()
+local A_1 = 
+{
+	[1] = "Woman"
+}
+local Event = game:GetService("ReplicatedStorage").ReplaceBody
+Event:FireServer(A_1)
+end)
+Section:NewButton("Robloxian 2.0", "Makes you the robloxian 2.0 body", function()
+local A_1 = 
+{
+	[1] = "Robloxian 2.0"
+}
+local Event = game:GetService("ReplicatedStorage").ReplaceBody
+Event:FireServer(A_1)
+end)
+Section:NewButton("Superhero", "Makes you the muscle body", function()
+local A_1 = 
+{
+	[1] = "Superhero"
+}
+local Event = game:GetService("ReplicatedStorage").ReplaceBody
+Event:FireServer(A_1)
+end)
+Section:NewButton("Cool Kid", "Makes you the Cool Kid body", function()
+local A_1 = 
+{
+	[1] = "Cool Kid"
+}
+local Event = game:GetService("ReplicatedStorage").ReplaceBody
+Event:FireServer(A_1)
+end)
+Section:NewButton("Bounty Hunter", "Makes you the Bounty Hunter body", function()
+local A_1 = 
+{
+	[1] = "Bounty Hunter"
+}
+local Event = game:GetService("ReplicatedStorage").ReplaceBody
+Event:FireServer(A_1)
+end)
+Section:NewButton("Football Player", "Makes you the Football Player body", function()
+local A_1 = 
+{
+	[1] = "Football Player"
+}
+local Event = game:GetService("ReplicatedStorage").ReplaceBody
+Event:FireServer(A_1)
+end)
+Section:NewButton("Gunslinger", "Makes you the Gunslinger body", function()
+local A_1 = 
+{
+	[1] = "Gunslinger"
+}
+local Event = game:GetService("ReplicatedStorage").ReplaceBody
+Event:FireServer(A_1)
+end)
+Section:NewButton("Pirate", "Makes you the Pirate body", function()
+local A_1 = 
+{
+	[1] = "Pirate"
+}
+local Event = game:GetService("ReplicatedStorage").ReplaceBody
+Event:FireServer(A_1)
+end)
+local Tab = Window:NewTab("Others")
+local Section = Tab:NewSection("Extra stuff")
+Section:NewButton("Server Hop", "Joins a different server", function()
+    local module = loadstring(game:HttpGet"https://raw.githubusercontent.com/LeoKholYt/roblox/main/lk_serverhop.lua")()
+	module:Teleport(game.PlaceId)
+end)
+Section:NewKeybind("Open/Close GUI", "keybind for gui", Enum.KeyCode.G, function()
+	Library:ToggleUI()
+end)

@@ -1,0 +1,184 @@
+local Library = loadstring(game:HttpGet("https://pastebin.com/raw/59vE7ecD"))()
+local Window = Library.CreateLib("Ocean X | Universal", "Ocean") --Replace BloodTheme if you want
+--[[Themes:
+    LightTheme
+    DarkTheme
+    GrapeTheme
+    BloodTheme
+    Ocean
+    Midnight
+    Sentinel
+    Synapse
+--]]
+game:GetService("StarterGui"):SetCore("SendNotification", { 
+        Title = "Notification";
+        Text = "yayayaya";
+        Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
+    Duration = 5;
+local Tab = Window:NewTab("Universal Scripts")
+local Section = Tab:NewSection("Universal scripts")
+Section:NewButton("Kill all", "u need more tools then there r players", function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/DigitalityScripts/roblox-scripts/main/Kill%20All'))() --Not mine
+end)
+Section:NewButton("Brings all", "u need more tools then there r players", function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/DigitalityScripts/roblox-scripts/main/Bring%20All'))() --Not mine
+end)
+Section:NewButton("Loop Fling All (RTRHO)", "flings all what else lmfaooaoao", function()
+loadstring(game:HttpGet('https://github.com/DigitalityScripts/roblox-scripts/raw/main/loop%20fling%20all'))() --Not mine
+end)
+Section:NewButton("Tall (BE RTHRO AND R15)", "make all ur proportions max to use", function()
+loadstring(game:HttpGet('https://pastebin.com/raw/nSM6JfJc'))()
+end)
+local Tab = Window:NewTab("Player")
+local Section = Tab:NewSection("Movement")
+Section:NewSlider("Speed", "changes your speed", 500, 0, function(s)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+end)
+Section:NewSlider("JumpPower", "changes how high you jump", 500, 0, function(s)
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
+end)
+Section:NewSlider("Gravity", "changes your gravity", 0, 1000, function(s)
+    game.Workspace.Gravity = s
+end)
+local Section = Tab:NewSection("Defaults")
+Section:NewButton("Change to normal Speed (16)", "Makes your speed the default speed", function()
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+end)
+Section:NewButton("Change to normal JumpPower (50)", "Makes your jumppower the default", function()
+game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
+end)
+Section:NewButton("Change to normal Gravity (196)", "Makes your gravity normal", function()
+game.Workspace.Gravity = 196
+end)
+local Section = Tab:NewSection("Extra (Soon)")
+local Tab = Window:NewTab("Rate My Avatar")
+local Section = Tab:NewSection("Rate My Avatar")
+Section:NewButton("Get Knight", "Makes u knight make sure no one else has it", function()
+local hrp = game.Players.LocalPlayer.Character.HumanoidRootPart
+local gobackto = hrp.CFrame
+local target = game:GetService("Workspace").JewelleryStand
+if target.Transparency ~= 1 then
+hrp.CFrame = CFrame.new(target.Position)
+wait(0.4)
+fireproximityprompt(target.ProximityPrompt)
+wait()
+hrp.CFrame = gobackto
+end
+end)
+Section:NewToggle("Dupe Sword (For kill and bring all)", "dupes swords", function(x)
+ if state then
+		local G=game
+local TweenService=G:GetService("TweenService")
+local Players=G:GetService("Players")
+local LocalPlayer=Players.LocalPlayer
+local StarterGui=G.StarterGui
+local StarterPack=G.StarterPack
+local StarterPlayer=G.StarterPlayer
+local StarterCharacterScripts=StarterPlayer.StarterCharacterScripts
+local StarterPlayerScripts=StarterPlayer.StarterPlayerScripts
+local ReplicatedFirst=G:GetService("ReplicatedFirst")
+local ReplicatedStorage=G:GetService("ReplicatedStorage")
+local ServerScriptService=G:GetService("ServerScriptService")
+local ServerStorage=G:GetService("ServerStorage")
+local Lighting=G:GetService("Lighting")
+local SoundService=G:GetService("SoundService")
+local Teams=G:GetService("Teams")
+local RunService=G:GetService('RunService')
+local Heartbeat=RunService.Heartbeat
+local RenderStepped=RunService.RenderStepped
+local Stepped=RunService.Stepped
+local In=Instance.new
+local CFn=CFrame.new
+local V3n=Vector3.new
+local LRn=NumberRange.new
+local TIn=TweenInfo.new
+local CSKn=ColorSequenceKeypoint.new
+--math
+local inf=math.huge
+local rng=math.random
+local mr=math.round
+local mce=math.ceil
+local mf=math.floor
+local pi=math.pi
+local ab=math.abs
+local mco=math.cos
+local ma=math.acos
+local ml=math.log
+_G.e=true
+_G.maxswr=false
+_G.blocktool=false
+_G.equiptool=true
+local con;
+con=RenderStepped:connect(function()
+    if _G.maxswr==true then
+    	local cout=0
+        for _,v in pairs(LocalPlayer.Character:GetChildren())do
+    		if v:IsA("Tool")then
+				if v.Name=="ClassicSword"then
+    			    cout+=1
+				end
+    		end
+    	end
+    	if cout>=2000 then con:Disconnect() end
+    end
+    if _G.e==false then con:Disconnect() end
+	if _G.equiptool==true then
+    for _,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren())do
+    	if v:IsA("Tool") and v.Name=="ClassicSword"then
+    		local han=v:FindFirstChild("Handle")
+    		if han then
+    			han.Massless=true;han.CanCollide=false;han.CanTouch=false;han.CanQuery=false
+				if _G.blocktool==true then
+                    local mesh=han:FindFirstChildWhichIsA("SpecialMesh")
+					if mesh then
+						mesh:Remove()
+					end
+				end
+    			v.Parent=game.Players.LocalPlayer.Character
+    		end
+    	end
+    end
+	end
+    local n={[1]="ClassicSword"}
+    game:GetService("ReplicatedStorage").RequestTool:FireServer(unpack(n))
+end)
+    else
+		_G.e=false
+		print("no more swords")
+    end
+end)
+local Tab = Window:NewTab("Cant Say the Word")
+local Section = Tab:NewSection("Cant say the word")
+Section:NewButton("Get tools (For kill and bring all)", "gives u all tools (can spam it lololol)", function()
+    for i,v in next, game:GetService("Players").LocalPlayer.PlayerGui.Main:GetDescendants() do
+if v.Name == 'RemoteEvent1' then
+v:FireServer()
+end
+end
+end)
+local Tab = Window:NewTab("Cant Say the Letter")
+local Section = Tab:NewSection("Cant say the letter")
+Section:NewButton("Give tools (For kill and bring all)", "Gives you tools", function()
+    for i,v in next, game:GetService("Players").LocalPlayer.PlayerGui.Main:GetDescendants() do
+if v.Name == 'RemoteEvent1' then
+v:FireServer()
+end
+end
+end)
+local Tab = Window:NewTab("Scripts")
+local Section = Tab:NewSection("Scripts")
+Section:NewButton("Infinite yield", "Best admin script in my opinion", function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+end)
+Section:NewButton("CMD-X", "Good admin too has fun scripts", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/CMD-X/CMD-X/master/Source", true))()
+end)
+local Tab = Window:NewTab("Others")
+local Section = Tab:NewSection("Extra scripts")
+Section:NewButton("Server Hop", "Joins a different server", function()
+    local module = loadstring(game:HttpGet"https://raw.githubusercontent.com/LeoKholYt/roblox/main/lk_serverhop.lua")()
+	module:Teleport(game.PlaceId)
+end)
+Section:NewKeybind("Open/Close GUI", "keybind for gui", Enum.KeyCode.G, function()
+	Library:ToggleUI()
+end)

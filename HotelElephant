@@ -1,10 +1,13 @@
+if game.PlaceId == 23578803 then
+    -- script here
+end
 game:GetService("StarterGui"):SetCore("SendNotification", { 
         Title = "Notification";
-        Text = "GUI Ran";
+        Text = "Succesfully loaded";
         Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
     Duration = 5;
-local Library = loadstring(game:HttpGet("https://pastebin.com/raw/59vE7ecD"))()
-local Window = Library.CreateLib("Hotel Elephant Exploit", "Ocean")
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Ocean X | Hotel Elephant", "Ocean")
 local Tab = Window:NewTab("Player")
 local Section = Tab:NewSection("Movement")
 Section:NewSlider("Speed", "changes your speed", 500, 0, function(s)
@@ -62,8 +65,12 @@ local args = {
 game:GetService("ReplicatedStorage").ChangeTeam:InvokeServer(unpack(args))
 
 end)
+local Section = Tab:NewSection("Extra")
+Section:NewButton("Reset (Normal)", "Normal reset (Health 0)", function()
+game.Players.LocalPlayer.Character.Humanoid.Health = 0
+end)
 local Tab = Window:NewTab("Cash")
-local Section = Tab:NewSection("Give yourself cash")
+local Section = Tab:NewSection("Get cash")
 Section:NewButton("10K", "Gives you 10K Cash", function()
 local A_1 = false
 local A_2 = 10000
@@ -98,6 +105,19 @@ local A_2 = 100000000000000
 local A_3 = "Cash"
 local Event = game:GetService("ReplicatedStorage").MoneyRequest
 Event:FireServer(A_1, A_2, A_3)
+end)
+Section:NewButton("10K For everyone", "gives cash to everyone", function()    
+    	Players = game:GetService("Players")
+	for i, plr in pairs(Players:GetPlayers()) do
+		local e = {
+			[1] = false,
+			[2] = 10000,
+			[3] = "Cash",
+			[4] = plr
+		}
+
+		game:GetService("ReplicatedStorage").MoneyRequest:FireServer(unpack(e))
+	end
 end)
 Section:NewButton("Make everyone jeff bezos", "gives sh1t ton of money to everyone", function()    
     	Players = game:GetService("Players")
@@ -193,7 +213,7 @@ end
     end)
 Section:NewButton("Suicide", "makes u jump off the balcony", function()
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(84.34717559814453, 101.9999771118164, -37.20904541015625)
---game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Goodbye","All")
+game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Goodbye","All")
 --Remove "-- from the line above if you want to say Goodbye when jumping"
 game.Players.LocalPlayer.Character.Humanoid.Jump = true
 wait(0.8)
@@ -431,4 +451,20 @@ Section:NewButton("Server Hop", "Joins a different server", function()
 end)
 Section:NewKeybind("Open/Close GUI", "keybind for gui", Enum.KeyCode.G, function()
 	Library:ToggleUI()
+end)
+Section:NewButton("Copy my discord tag", "Copies my discord tag", function()
+setclipboard("vlorb#2662")
+game:GetService("StarterGui"):SetCore("SendNotification", { 
+        Title = "Notification";
+        Text = "Copied to clipboard!";
+        Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
+    Duration = 5;
+end)
+Section:NewButton("Copy my discord ID", "Incase i change my tag", function()
+setclipboard("489218510824931365")
+game:GetService("StarterGui"):SetCore("SendNotification", { 
+        Title = "Notification";
+        Text = "Copied to clipboard!";
+        Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
+    Duration = 5;
 end)

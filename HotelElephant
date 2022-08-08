@@ -1,6 +1,4 @@
-if game.PlaceId == 23578803 then
-    -- script here
-end
+--Game link: https://www.roblox.com/games/23578803/Hotel-Elephant
 game:GetService("StarterGui"):SetCore("SendNotification", { 
         Title = "Notification";
         Text = "Succesfully loaded";

@@ -29,7 +29,7 @@ end)
 Section:NewButton("Tall (BE RTHRO AND R15)", "make all ur proportions max to use", function()
 loadstring(game:HttpGet('https://pastebin.com/raw/nSM6JfJc'))()
 end)
-Section:NewButton("Kill all", "u need more tools then there r players", function()
+Section:NewButton("R15 Invisible", "can interact", function()
 local removeNametags = false -- remove custom billboardgui nametags from hrp, could trigger anticheat
 
 local plr = game:GetService("Players").LocalPlayer

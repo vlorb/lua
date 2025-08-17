@@ -1,0 +1,84 @@
+-- Load Rayfield
+getgenv().SecureMode = true
+local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/UI-Interface/CustomFIeld/main/RayField.lua'))()
+
+-- Wait for character
+local Player = game.Players.LocalPlayer
+Player.CharacterAdded:Wait()
+local Humanoid = Player.Character:WaitForChild("Humanoid")
+
+-- Window
+local Window = Rayfield:CreateWindow({
+    Name = "Animation Hub",
+    LoadingTitle = "Animation Hub Loading...",
+    LoadingSubtitle = "Powered by Rayfield",
+    ShowText = "Animations",
+    Theme = "Default",
+    ToggleUIKeybind = "RightControl",
+    ConfigurationSaving = {
+        Enabled = true,
+        FolderName = nil,
+        FileName = "AnimHubConfig"
+    }
+})
+
+-- Tab
+local AnimationsTab = Window:CreateTab("Animations", "rewind")
+local AnimSection = AnimationsTab:CreateSection("Available Animations")
+
+-- Animation loader
+local Animation = Instance.new("Animation")
+local Track
+
+local function PlayAnimation(id, speed)
+    if not Humanoid then return end
+    if Track then Track:Stop() end
+    Animation.AnimationId = "rbxassetid://" .. id
+    Track = Humanoid:LoadAnimation(Animation)
+    Track:Play()
+    Track.Looped = true
+    Track:AdjustSpeed(speed or 1)
+end
+
+-- Function to add a single animation button
+local function AddEmote(id, name)
+    AnimSection:AddButton({
+        Name = name,
+        Callback = function()
+            PlayAnimation(id, 1)
+        end
+    })
+end
+
+-- New emotes at top
+AddEmote(114140630538674, "AI Cat Dance")
+AddEmote(89490157555374, "Sayori")
+AddEmote(85361710130557, "Caramelldansen")
+AddEmote(76612430083861, "MM2")
+AddEmote(139698769473012, "Rampage 1.0")
+AddEmote(80199369124716, "Rampage 2.0")
+
+-- Rest of emotes
+AddEmote(78195344190486, "Dog Mode")
+AddEmote(115417853064013, "Helicopter Mode")
+AddEmote(85588129788692, "Hit the Griddy")
+AddEmote(83265734904502, "Take the L")
+AddEmote(129764254213842, "Gangnam Style")
+AddEmote(114400428765989, "180° flip")
+AddEmote(110146282544198, "Orange Justice")
+AddEmote(10714340543, "The Floss")
+AddEmote(109873544976020, "Biblically Accurate Emote")
+AddEmote(111251252458517, "California Gurls")
+AddEmote(97148848007002, "Russian dance")
+AddEmote(114687548971893, "Creepr Mode")
+AddEmote(106389948045296, "Floating On Clouds")
+
+-- Emergency Stop
+AnimSection:AddButton({
+    Name = "Emergency Stop",
+    Callback = function()
+        if Track then
+            Track:Stop()
+        end
+    end
+})
